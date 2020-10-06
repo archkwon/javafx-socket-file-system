@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plusplm.DaemonRunner">
+	<children>
+		<Label layoutX="10.0" layoutY="14.0" prefHeight="19.0" prefWidth="580.0" text="Setup Information">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+			<padding>
+				<Insets left="5.0" />
+			</padding>
+		</Label>
+		<HBox layoutX="14.0" layoutY="52.0" prefHeight="164.0" prefWidth="495.0">
+			<children>
+				<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="542.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="152.0" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="319.0" />
+                  		<ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="86.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="19.0" prefWidth="161.0" text="MAC주소 :" GridPane.rowIndex="0">
+							<GridPane.margin>
+								<Insets right="10.0" />
+							</GridPane.margin>
+						</Label>
+						<Label fx:id="lbMacIp" prefHeight="19.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0">
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+						</Label>
+						
+						<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="19.0" prefWidth="161.0" text="네트워크드라이브 :" GridPane.rowIndex="1">
+							<GridPane.margin>
+								<Insets right="10.0" />
+							</GridPane.margin>
+						</Label>
+						<Label fx:id="lbDrive" prefHeight="19.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+						</Label>
+						
+						<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="19.0" prefWidth="151.0" text="CAD프로그램 :" GridPane.rowIndex="2">
+							<GridPane.margin>
+								<Insets right="10.0" />
+							</GridPane.margin>
+						</Label>
+						<Label fx:id="lbCadProgram" prefHeight="19.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+						</Label>
+						
+						<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="19.0" prefWidth="161.0" text="사용자아이디 :" GridPane.rowIndex="3">
+							<GridPane.margin>
+								<Insets right="10.0" />
+							</GridPane.margin>
+						</Label>
+						<Label fx:id="lbUserId" prefHeight="19.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+						</Label>
+						
+						<Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="19.0" prefWidth="151.0" text="업데이트일자 :" GridPane.rowIndex="4">
+							<GridPane.margin>
+								<Insets right="10.0" />
+							</GridPane.margin>
+						</Label>
+						<Label fx:id="lbUpdateDate" prefHeight="19.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+						</Label>					
+					</children>
+				</GridPane>
+			</children>
+		</HBox>
+		<Separator layoutX="10.0" layoutY="43.0" prefHeight="3.0" prefWidth="580.0" />
+		
+		<Button fx:id="btnSetup" alignment="CENTER" contentDisplay="CENTER" layoutX="420.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleSetupAction" prefHeight="30.0" prefWidth="80.0" styleClass="info" text="Setup" textAlignment="CENTER">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnClose" alignment="CENTER" contentDisplay="CENTER" layoutX="510.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleExitAction" prefHeight="30.0" prefWidth="80.0" styleClass="default" text="Exit" textAlignment="CENTER">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Button>
+      	<Button fx:id="btnStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="510.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleStatusAction" prefHeight="30.0" prefWidth="80.0" styleClass="info" text="연결확인" textAlignment="CENTER">
+	         <font>
+	            <Font name="System Bold" size="15.0" />
+	         </font>
+	     </Button>
+	     <TextArea fx:id="console" layoutX="10.0" layoutY="280.0" prefHeight="131.0" prefWidth="580.0" wrapText="true" />
+	</children>
+</AnchorPane>
